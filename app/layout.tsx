@@ -1,5 +1,6 @@
 import Header from '@/components/header'
 import './globals.css'
+import './embla.css'
 import { Inter } from 'next/font/google'
 import ActiveSectionContextProvider from '@/context/active-section-context'
 import Footer from '@/components/footer'
@@ -10,8 +11,8 @@ import { Toaster } from 'react-hot-toast'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-	title: 'Ricardo | Personal Portfolio',
-	description: 'Ricardo is a full-stack developer with 8 years of experience.',
+	title: 'Enth Soft',
+	description: 'ENTH SOFT',
 }
 
 export default function RootLayout({
@@ -29,6 +30,8 @@ export default function RootLayout({
 				<div className='bg-[#dbd7fb] absolute top-[80rem] right-0 -z-10 h-[31.25rem] w-[50rem] rounded-full blur-[16rem] sm:w-[68.75rem] md:left-[-33rem] lg:right-[-20rem] xl:right-[20rem] 2xl:left-[-5rem] dark:bg-[#676394]'></div>
 
 				<div className='bg-[#0b6050] absolute top-[160rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[18rem] sm:w-[68.75rem] dark:bg-[#04764e]'></div>
+
+				<div className='bg-[#dbd7fb] absolute bottom-[-0rem] -z-10 left-1/2 transform -translate-x-1/2 h-[31.25rem] w-full rounded-full blur-[20rem]  dark:bg-[#04764e55]'></div>
 
 				<ThemeContextProvider>
 					<ActiveSectionContextProvider>

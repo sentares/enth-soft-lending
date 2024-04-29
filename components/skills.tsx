@@ -21,7 +21,7 @@ const fadeInAnimationVariants = {
 }
 
 export default function Skills() {
-	const { ref } = useSectionInView('Услуги')
+	const { ref } = useSectionInView('Тарифы')
 
 	return (
 		<section
@@ -29,7 +29,9 @@ export default function Skills() {
 			ref={ref}
 			className='mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40'
 		>
-			<SectionHeading>My skills</SectionHeading>
+			<h3 className='text-3xl font-medium  mb-8 text-center'>
+				На любом тарифе мы предлагаем
+			</h3>
 			<ul className='flex flex-wrap justify-center gap-2 text-lg text-gray-800'>
 				{skillsData.map((skill, index) => (
 					<motion.li

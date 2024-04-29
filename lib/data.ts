@@ -2,9 +2,16 @@ import React from 'react'
 import { CgWorkAlt } from 'react-icons/cg'
 import { FaReact } from 'react-icons/fa'
 import { LuGraduationCap } from 'react-icons/lu'
+import { MdNetworkCheck } from 'react-icons/md'
+import { FaDatabase } from 'react-icons/fa6'
+import { CgWebsite } from 'react-icons/cg'
+import { FaEarthAmericas } from 'react-icons/fa6'
+
 import corpcommentImg from '@/public/1.png'
 import rmtdevImg from '@/public/2.png'
 import wordanalyticsImg from '@/public/4.png'
+import { title } from 'process'
+import { hostsDataTypes } from './dataType'
 
 export const links = [
 	{
@@ -12,20 +19,18 @@ export const links = [
 		hash: '#home',
 	},
 	{
-		name: 'О нас',
-		hash: '#about',
-	},
-	{
-		name: 'Проекты',
-		hash: '#projects',
-	},
-	{
 		name: 'Услуги',
 		hash: '#skills',
 	},
+
+	{
+		name: 'Приложение',
+		hash: '#projects',
+	},
+
 	{
 		name: 'Тарифы',
-		hash: '#experience',
+		hash: '#hosts',
 	},
 	{
 		name: 'Связаться',
@@ -35,73 +40,133 @@ export const links = [
 
 export const experiencesData = [
 	{
-		title: 'Graduated bootcamp',
-		location: 'Miami, FL',
+		title: 'Виртуальный хостинг',
+		location: '',
 		description:
-			'I graduated after 6 months of studying. I immediately found a job as a front-end developer.',
-		icon: React.createElement(LuGraduationCap),
-		date: '2019',
+			'Создавайте и размещайте сайты любой сложности — от простых визиток до большихмагазинов на 1С-Битрикс',
+		icon: React.createElement(MdNetworkCheck),
+		date: '',
 	},
 	{
-		title: 'Front-End Developer',
-		location: 'Orlando, FL',
+		title: 'Аренда VDS и VPS',
+		location: '',
 		description:
-			'I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.',
+			'Виртуальные серверы с почасовой оплатой.Меняйте конфигурацию сервера в любой момент и в пару кликов',
 		icon: React.createElement(CgWorkAlt),
-		date: '2019 - 2021',
+		date: '',
 	},
 	{
-		title: 'Full-Stack Developer',
-		location: 'Houston, TX',
+		title: 'Выделенные серверы',
+		location: '',
 		description:
-			"I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-		icon: React.createElement(FaReact),
-		date: '2021 - present',
+			'Аренда физических серверов любых конфигураций — готовые сборки или под заказ',
+		icon: React.createElement(FaDatabase),
+		date: '',
+	},
+	{
+		title: 'Лендинги и сайты',
+		location: '',
+		description: 'Закажите разработку сайта любой сложности под ключ',
+		icon: React.createElement(CgWebsite),
+		date: '',
+	},
+	{
+		title: 'Регистрация доменов',
+		location: '',
+		description:
+			'Более 350 доменных зон. Лучшие цены на регистрацию и продление',
+		icon: React.createElement(FaEarthAmericas),
+		date: '',
 	},
 ] as const
 
 export const projectsData = [
 	{
-		title: 'CorpComment',
-		description:
-			'I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.',
-		tags: ['React', 'Next.js', 'MongoDB', 'Tailwind', 'Prisma'],
+		title: 'Подключайте новые тарифы с помощью приложения',
+		description: 'Откройте новые возможности в пару кликов',
+		tags: ['', 'IOS', 'Android', 'Удобство', 'Скорость', 'Поддержка'],
 		imageUrl: corpcommentImg,
 	},
 	{
-		title: 'rmtDev',
+		title: 'Права доступа',
 		description:
-			'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
-		tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Redux'],
+			'Нужно дать доступ к сайту разработчику? Создайте для него аккаунт с ограниченными правами',
+		tags: ['', 'Аккаунты', 'Статистика', 'Аналитика'],
 		imageUrl: rmtdevImg,
 	},
 	{
-		title: 'Word Analytics',
-		description:
-			'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
-		tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
+		title: 'Удобный интерфейс для управления вашим тарифом',
+		description: 'Настраивайте тарифы под себя',
+		tags: ['', 'Управление аккаунтом', 'Продукты', 'Настройка', 'Админ панель'],
 		imageUrl: wordanalyticsImg,
 	},
 ] as const
 
 export const skillsData = [
-	'HTML',
-	'CSS',
-	'JavaScript',
-	'TypeScript',
-	'React',
-	'Next.js',
-	'Node.js',
-	'Git',
-	'Tailwind',
-	'Prisma',
-	'MongoDB',
-	'Redux',
-	'GraphQL',
-	'Apollo',
-	'Express',
-	'PostgreSQL',
-	'Python',
-	'Django',
-	'Framer Motion',
+	'Бесплатная почта',
+	'Поддержка 24/7',
+	'Права доступа',
+	'Простой файловый менеджер',
+	'Бесплатный SSL-сертификат',
+	'Админка в приложении',
+	'Мониторинг производительности',
+] as const
+
+export const hostsData: hostsDataTypes[] = [
+	{
+		id: 1,
+		name: 'Year+',
+		title: 'Идеальное решение для сайта-визитки',
+		month: '255',
+		year: '196',
+		clients_best: false,
+		sites: '1 сайт',
+		NVM: '10 ',
+		db: '1 база данных',
+		ssl: 'Бесплатный',
+		mail_qvot: '10 ГБ',
+		mail_box: 'Неограниченное',
+	},
+	{
+		id: 2,
+		name: 'Optimo+',
+		title: 'Выбор популярных блогеров и сайтов-галерей',
+		month: '370',
+		year: '274',
+		clients_best: false,
+		sites: '10 сайтов',
+		NVM: '30 ',
+		db: 'Безлимитные базы данных',
+		mail_box: '10 ГБ',
+		mail_qvot: 'Неограниченное',
+		ssl: 'Бесплатный',
+	},
+	{
+		id: 3,
+		name: 'Century+',
+		title: 'Наилучший вариант для сайта вашей компании',
+		month: '497',
+		year: '397',
+		clients_best: true,
+		sites: '25 сайтов',
+		NVM: '40 ',
+		db: 'Безлимитные базы данных',
+		mail_box: '10 ГБ',
+		mail_qvot: 'Неограниченное',
+		ssl: 'Бесплатный',
+	},
+	{
+		id: 4,
+		name: 'Millennium+',
+		title: 'Продвинутое решение для крупных e-commerce проектов',
+		month: '746',
+		year: '598',
+		clients_best: false,
+		sites: '50 сайтов',
+		NVM: '50 ',
+		db: 'Безлимитные базы данных',
+		mail_box: '10 ГБ',
+		mail_qvot: 'Неограниченное',
+		ssl: 'Бесплатный',
+	},
 ] as const

@@ -1,12 +1,9 @@
 'use client'
 
-import React from 'react'
-import SectionHeading from './section-heading'
-import { motion } from 'framer-motion'
 import { useSectionInView } from '@/lib/hooks'
-import { sendEmail } from '@/actions/sendEmail'
-import SubmitBtn from './submit-btn'
-import toast from 'react-hot-toast'
+import { motion } from 'framer-motion'
+import { FaTelegram, FaWhatsapp } from 'react-icons/fa'
+import SectionHeading from './section-heading'
 
 export default function Contact() {
 	const { ref } = useSectionInView('Связаться')
@@ -29,46 +26,30 @@ export default function Contact() {
 				once: true,
 			}}
 		>
-			<SectionHeading>Contact me</SectionHeading>
+			<SectionHeading>Связаться с нами</SectionHeading>
 
-			<p className='text-gray-700 -mt-6 dark:text-white/80'>
-				Please contact me directly at{' '}
-				<a className='underline' href='mailto:example@gmail.com'>
-					example@gmail.com
-				</a>{' '}
-				or through this form.
-			</p>
-
-			<form
-				className='mt-10 flex flex-col dark:text-black'
-				action={async formData => {
-					const { data, error } = await sendEmail(formData)
-
-					if (error) {
-						toast.error(error)
-						return
-					}
-
-					toast.success('Email sent successfully!')
-				}}
-			>
-				<input
-					className='h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none'
-					name='senderEmail'
-					type='email'
-					required
-					maxLength={500}
-					placeholder='Your email'
-				/>
-				<textarea
-					className='h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none'
-					name='message'
-					placeholder='Your message'
-					required
-					maxLength={5000}
-				/>
-				<SubmitBtn />
-			</form>
+			<div className='flex items-center justify-center gap-4'>
+				<a
+					href='https://t.me/+9960708019019'
+					target='_blank'
+					rel='noopener noreferrer'
+				>
+					<FaTelegram
+						size={44}
+						className='cursor-pointer hover:scale-105 text-blue-500 transition'
+					/>
+				</a>
+				<a
+					href='https://wa.me/+9960708019019'
+					target='_blank'
+					rel='noopener noreferrer'
+				>
+					<FaWhatsapp
+						size={44}
+						className='cursor-pointer hover:scale-105 text-primary-500 transition'
+					/>
+				</a>
+			</div>
 		</motion.section>
 	)
 }
